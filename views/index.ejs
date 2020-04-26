@@ -1,0 +1,61 @@
+<%- include ("./partials/header")%>
+
+
+
+<div class="container">
+     
+         <div class="container">
+             <h2>Here is Donar Table</h2>
+            
+             
+ </div>
+   
+      <div class="jumbotron">
+      <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+      <div>
+
+             <p><strong>View  all the details of donars  </strong></p>
+
+             
+      <table border="4" align="center">
+
+         <thead>
+			<tr>
+			<th>NAME</th>
+			<th>EMAIL</th>
+			<th>ADDRESS</th>
+			<th>BLOOD GROUP</th>
+			<th>CONTACT NO</th>
+			<th>DISEASE</th>
+		</tr>
+		</thead>
+		<tbody>
+        <% donarinfo.forEach(function(x){ %>
+        	<tr >
+			<td><%= x.name %></td>
+			<td><%= x.email %></td>
+			<td><%= x.address %></td>
+			<td><%= x.blood_group %></td>
+			<td><%= x.contact_no %></td>
+			<td><%= x.any_disease %></td>
+		</tr>
+		<% }); %>
+		</tbody>
+		</table>
+		<hr>
+		<p>
+                <a class="btn btn-primary btn-large" href="/bloodbank/new">Add a New Donar</a>
+             </p>
+	
+		</div>
+
+		</div>
+
+
+
+
+
+
+
+
+<%- include ("./partials/footer")%>
